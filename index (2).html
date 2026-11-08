@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Marketing &amp; SEO Quiz</title>
+<meta name="description" content="20 scenario-based MCQs on digital marketing foundations and SEO. Digital Marketing and Analytics, PGE3 Marketing, Y Schools Troyes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f3ee;
+    --surface: #ffffff;
+    --surface-2: #faf9f6;
+    --ink: #1c1d21;
+    --ink-2: #565a63;
+    --line: #e3e0d8;
+    --accent: #1f4e79;
+    --accent-ink: #ffffff;
+    --accent-soft: #e6eef6;
+    --ok: #1d7a4a;
+    --ok-soft: #e3f3ea;
+    --bad: #b3261e;
+    --bad-soft: #fbe9e7;
+    --warn: #c46a00;
+    --shadow: 0 1px 2px rgba(20,20,30,.05), 0 8px 24px rgba(20,20,30,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14161a;
+      --surface: #1d2026;
+      --surface-2: #23272e;
+      --ink: #eceef2;
+      --ink-2: #a3a9b4;
+      --line: #313640;
+      --accent: #7fb2e5;
+      --accent-ink: #0e1a26;
+      --accent-soft: #1f2d3b;
+      --ok: #5cc98d;
+      --ok-soft: #173225;
+      --bad: #f28b82;
+      --bad-soft: #3a1f1d;
+      --warn: #f0a443;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14161a; --surface: #1d2026; --surface-2: #23272e; --ink: #eceef2; --ink-2: #a3a9b4;
+    --line: #313640; --accent: #7fb2e5; --accent-ink: #0e1a26; --accent-soft: #1f2d3b;
+    --ok: #5cc98d; --ok-soft: #173225; --bad: #f28b82; --bad-soft: #3a1f1d; --warn: #f0a443;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; }
+
+  header.top {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    margin-bottom: 20px; font-size: 13px; color: var(--ink-2);
+  }
+  header.top .course { font-weight: 600; color: var(--ink); }
+  .theme-btn {
+    border: 1px solid var(--line); background: var(--surface); color: var(--ink-2);
+    border-radius: 999px; padding: 6px 12px; font: inherit; font-size: 12px; cursor: pointer;
+  }
+
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
+    box-shadow: var(--shadow); padding: 28px;
+  }
+  @media (max-width: 520px) { .card { padding: 20px; } }
+
+  h1, h2 { font-family: "Fraunces", Georgia, serif; letter-spacing: -0.01em; margin: 0; }
+  h1 { font-size: clamp(28px, 5vw, 38px); line-height: 1.15; }
+  h2 { font-size: 22px; line-height: 1.25; }
+  .eyebrow { text-transform: uppercase; letter-spacing: .08em; font-size: 12px; font-weight: 600; color: var(--accent); }
+  .muted { color: var(--ink-2); }
+
+  /* Start screen */
+  .rules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 24px 0; }
+  .rule { background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
+  .rule b { display: block; font-size: 22px; font-family: "Fraunces", Georgia, serif; }
+  .rule span { font-size: 13px; color: var(--ink-2); }
+  @media (max-width: 520px) { .rules { grid-template-columns: 1fr; } }
+  label.field { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+  input[type="text"] {
+    width: 100%; padding: 12px 14px; font: inherit; color: var(--ink);
+    background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px;
+  }
+  input[type="text"]:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  ul.notes { padding-left: 18px; margin: 18px 0 0; color: var(--ink-2); font-size: 14px; }
+  ul.notes li { margin: 4px 0; }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    border: none; border-radius: 10px; padding: 13px 22px; font: inherit; font-weight: 600;
+    cursor: pointer; background: var(--accent); color: var(--accent-ink); transition: transform .08s, opacity .2s;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+  .btn[disabled] { opacity: .5; cursor: not-allowed; }
+  .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
+
+  /* Quiz screen */
+  .qhead { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 14px; }
+  .qcount { font-size: 14px; color: var(--ink-2); }
+  .qcount b { color: var(--ink); font-size: 18px; }
+  .progress { height: 6px; background: var(--line); border-radius: 999px; overflow: hidden; margin-bottom: 18px; }
+  .progress > div { height: 100%; background: var(--accent); width: 0; transition: width .3s ease; }
+
+  .timer { position: relative; width: 64px; height: 64px; flex: none; }
+  .timer svg { transform: rotate(-90deg); width: 64px; height: 64px; }
+  .timer circle { fill: none; stroke-width: 6; }
+  .timer .track { stroke: var(--line); }
+  .timer .bar { stroke: var(--accent); stroke-linecap: round; transition: stroke .3s; }
+  .timer.low .bar { stroke: var(--warn); }
+  .timer.crit .bar { stroke: var(--bad); }
+  .timer .num {
+    position: absolute; inset: 0; display: grid; place-items: center;
+    font-weight: 700; font-size: 18px; font-variant-numeric: tabular-nums;
+  }
+  .timer.crit .num { color: var(--bad); }
+
+  .tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); margin-bottom: 12px; }
+  .scenario { background: var(--surface-2); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 14px 16px; margin: 0 0 14px; }
+  .question { font-weight: 600; font-size: 17px; margin: 0 0 16px; }
+
+  .options { display: grid; gap: 10px; }
+  .opt {
+    display: flex; align-items: flex-start; gap: 12px; text-align: left; width: 100%;
+    background: var(--surface); color: var(--ink); border: 1.5px solid var(--line); border-radius: 12px;
+    padding: 13px 14px; font: inherit; cursor: pointer; transition: border-color .15s, background .15s;
+  }
+  .opt:hover:not([disabled]) { border-color: var(--accent); background: var(--accent-soft); }
+  .opt:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .opt .key {
+    flex: none; width: 28px; height: 28px; border-radius: 8px; display: grid; place-items: center;
+    font-size: 13px; font-weight: 700; background: var(--surface-2); border: 1px solid var(--line);
+  }
+  .opt[disabled] { cursor: default; }
+  .opt.correct { border-color: var(--ok); background: var(--ok-soft); }
+  .opt.correct .key { background: var(--ok); color: #fff; border-color: var(--ok); }
+  .opt.wrong { border-color: var(--bad); background: var(--bad-soft); }
+  .opt.wrong .key { background: var(--bad); color: #fff; border-color: var(--bad); }
+  .opt.dim { opacity: .55; }
+
+  .feedback { margin-top: 16px; border-radius: 12px; padding: 14px 16px; display: none; }
+  .feedback.show { display: block; }
+  .feedback.ok { background: var(--ok-soft); }
+  .feedback.bad { background: var(--bad-soft); }
+  .feedback .verdict { font-weight: 700; margin-bottom: 4px; }
+  .feedback.ok .verdict { color: var(--ok); }
+  .feedback.bad .verdict { color: var(--bad); }
+  .feedback p { margin: 0; font-size: 15px; }
+  .hint-keys { font-size: 12px; color: var(--ink-2); margin-top: 14px; }
+
+  /* Results */
+  .score-hero { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; margin: 18px 0 8px; }
+  .score-big { font-family: "Fraunces", Georgia, serif; font-size: 64px; font-weight: 700; line-height: 1; }
+  .score-big small { font-size: 28px; color: var(--ink-2); }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 20px 0; }
+  .stat { background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; padding: 12px; }
+  .stat b { display: block; font-size: 20px; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: 12px; color: var(--ink-2); }
+  .review { margin-top: 24px; display: grid; gap: 10px; }
+  .rv { border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; background: var(--surface); }
+  .rv .rv-top { display: flex; gap: 10px; align-items: baseline; }
+  .rv .badge { flex: none; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px; }
+  .rv .badge.ok { background: var(--ok-soft); color: var(--ok); }
+  .rv .badge.bad { background: var(--bad-soft); color: var(--bad); }
+  .rv .badge.to { background: var(--surface-2); color: var(--warn); border: 1px solid var(--line); }
+  .rv .q { font-weight: 600; font-size: 14px; }
+  .rv .a { font-size: 13px; color: var(--ink-2); margin-top: 6px; }
+  .rv .a b { color: var(--ink); font-weight: 600; }
+
+  .hidden { display: none !important; }
+  footer { text-align: center; font-size: 12px; color: var(--ink-2); margin-top: 24px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div><span class="course">Digital Marketing and Analytics</span> · PGE3 Marketing · Y Schools Troyes</div>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle light or dark theme">Theme</button>
+  </header>
+
+  <!-- START -->
+  <section class="card" id="startScreen">
+    <div class="eyebrow">Sessions 1 &amp; 2 · Knowledge check</div>
+    <h1 style="margin-top:8px">Digital Marketing Foundations &amp; SEO</h1>
+    <p class="muted" style="margin:10px 0 0">Twenty real-world scenarios. Read each one, then choose the best decision a marketer should make.</p>
+
+    <div class="rules">
+      <div class="rule"><b>20</b><span>scenario-based questions</span></div>
+      <div class="rule"><b>45 s</b><span>per question</span></div>
+      <div class="rule"><b>1</b><span>attempt per question, no going back</span></div>
+    </div>
+
+    <label class="field" for="studentName">Your full name <span style="color:var(--bad)">*</span></label>
+    <input type="text" id="studentName" placeholder="e.g. Camille Martin" autocomplete="name" maxlength="60" required aria-describedby="nameError">
+    <div id="nameError" class="hidden" role="alert" style="color:var(--bad); font-size:13px; margin-top:6px">Please enter your full name (first and last name) to start the quiz.</div>
+
+    <ul class="notes">
+      <li>When the timer reaches zero, the question is locked and counted as unanswered.</li>
+      <li>After each answer you'll see the correct option and a short explanation.</li>
+      <li>You can use keys <b>A–D</b> to answer and <b>Enter</b> to continue.</li>
+    </ul>
+
+    <div class="actions">
+      <button class="btn" id="startBtn" type="button" disabled>Start the quiz</button>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="card hidden" id="quizScreen" aria-live="polite">
+    <div class="qhead">
+      <div class="qcount">Question <b id="qNum">1</b> / <span id="qTotal">20</span></div>
+      <div class="timer" id="timer" role="timer" aria-label="Time remaining">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <circle class="track" cx="32" cy="32" r="28"></circle>
+          <circle class="bar" id="timerBar" cx="32" cy="32" r="28"></circle>
+        </svg>
+        <div class="num" id="timerNum">45</div>
+      </div>
+    </div>
+    <div class="progress"><div id="progressBar"></div></div>
+
+    <span class="tag" id="qTopic">Topic</span>
+    <div class="scenario" id="qScenario"></div>
+    <p class="question" id="qText"></p>
+    <div class="options" id="options"></div>
+
+    <div class="feedback" id="feedback">
+      <div class="verdict" id="verdict"></div>
+      <p id="explain"></p>
+    </div>
+
+    <div class="actions">
+      <button class="btn hidden" id="nextBtn" type="button">Next question →</button>
+    </div>
+    <div class="hint-keys">Keys: A · B · C · D to answer, Enter for next</div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="card hidden" id="resultScreen">
+    <div class="eyebrow">Your result</div>
+    <h2 id="resName" style="margin-top:6px"></h2>
+    <div class="muted" id="resDate" style="font-size:13px"></div>
+
+    <div class="score-hero">
+      <div class="score-big" id="resScore">0<small>/20</small></div>
+      <div>
+        <div style="font-weight:700; font-size:18px" id="resLabel"></div>
+        <div class="muted" id="resMsg"></div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b id="stCorrect">0</b><span>correct</span></div>
+      <div class="stat"><b id="stWrong">0</b><span>incorrect</span></div>
+      <div class="stat"><b id="stTimeout">0</b><span>timed out</span></div>
+    </div>
+    <div class="muted" style="font-size:13px">Average time per question: <b id="stAvg">0</b> s</div>
+
+    <div class="actions">
+      <button class="btn" id="retryBtn" type="button">Retake the quiz</button>
+      <button class="btn ghost" id="printBtn" type="button">Print / save as PDF</button>
+    </div>
+
+    <h2 style="margin-top:30px; font-size:19px">Review your answers</h2>
+    <div class="review" id="review"></div>
+  </section>
+
+  <footer>Digital Marketing and Analytics · Dr Faisal Shahzad · Y Schools Troyes</footer>
+</div>
+
+<script>
+/* =========================================================
+   QUESTION BANK
+   Each item: topic, scenario, question, options (first is NOT
+   necessarily correct), answer = index of correct option,
+   explanation. Options are shuffled at runtime.
+   ========================================================= */
+const QUESTIONS = [
+  {
+    topic: "What is digital marketing?",
+    scenario: "A furniture store in Troyes runs a video ad on a streaming TV platform. The ad is shown only to households in the Aube department, and the store tracks how many viewers later visit its website. A colleague says: “That's just TV advertising, not digital marketing.”",
+    question: "Who is right, and why?",
+    options: [
+      "The store: it uses a digital channel, is targeted to a chosen audience and its results are measurable",
+      "The colleague: any video ad watched on a TV screen is traditional marketing",
+      "The colleague: it only counts as digital marketing if it is shown on a smartphone",
+      "Neither: it is earned media because viewers chose to watch the platform"
+    ],
+    answer: 0,
+    explanation: "Digital marketing is the use of digital channels, devices and data to reach, engage and convert customers, and to measure the result. A streaming ad is delivered digitally, targetable and measurable, so it qualifies."
+  },
+  {
+    topic: "What makes digital different",
+    scenario: "At 9:00 on Monday, a sneaker brand sees that one version of its new Instagram ad has a very low click rate, while a second version performs five times better. By 11:00 the weak ad is paused and its budget moved to the stronger one.",
+    question: "Which characteristic of digital marketing does this best illustrate?",
+    options: [
+      "Real-time: campaigns can be changed within hours",
+      "Scalable: start small, then grow to any market",
+      "Interactive: customers answer back and talk to each other",
+      "Targetable: messages reach chosen groups of people"
+    ],
+    answer: 0,
+    explanation: "Being able to pause an underperforming ad the same day is the “real-time” advantage. A printed poster or aired TV spot is fixed once it is out."
+  },
+  {
+    topic: "Inbound vs outbound",
+    scenario: "A start-up is launching “smart insoles” that track posture. Almost nobody knows this product category exists, so there are virtually no Google searches for it. The launch is in one month.",
+    question: "Which approach should lead the launch?",
+    options: [
+      "Outbound (ads, posters) to spark demand quickly, with inbound content ready to capture searches later",
+      "Inbound SEO only, because it is cheaper and builds a lasting asset",
+      "Wait until people start searching, and only then publish blog articles",
+      "Earned media only: ask customers to post reviews before the product exists"
+    ],
+    answer: 0,
+    explanation: "Choose outbound when the product is new and nobody searches for it yet, and when results are needed fast. Best practice is to combine them: outbound sparks demand, inbound captures it over time."
+  },
+  {
+    topic: "Inbound vs outbound",
+    scenario: "A gym buys a list of 20,000 email addresses and sends them its monthly newsletter. The same newsletter also goes to 3,000 members who signed up for it on the gym's website.",
+    question: "How should these two sends be classified?",
+    options: [
+      "Bought list = outbound; website sign-ups = inbound",
+      "Both are inbound, because email is a digital channel",
+      "Both are outbound, because every newsletter is promotional",
+      "Bought list = inbound; website sign-ups = outbound"
+    ],
+    answer: 0,
+    explanation: "Inbound is permission marketing: people who opted in asked to hear from you. The same email sent to a bought list interrupts people who never asked, so it is outbound."
+  },
+  {
+    topic: "Applying the funnel",
+    scenario: "Month 2 for a meal-kit start-up: 100,000 ad impressions; 3% of people click through to the website; 10% of visitors start a free trial; 25% of trials become paying customers.",
+    question: "How many paying customers did the start-up get this month?",
+    options: ["75", "750", "300", "7,500"],
+    answer: 0,
+    explanation: "100,000 × 3% = 3,000 visits → 3,000 × 10% = 300 trials → 300 × 25% = 75 paying customers."
+  },
+  {
+    topic: "Applying the funnel",
+    scenario: "An e-bike subscription brand analyses its funnel. Only 4% of people who see the ad click on it, while every later stage converts well. The CEO says: “Let's just double the ad budget.”",
+    question: "What is the most efficient first response?",
+    options: [
+      "Improve the ad and the landing page to raise the 4% click rate: fix the biggest leak first",
+      "Double the impressions: it doubles subscribers at no extra cost",
+      "Remove the free trial to push visitors straight to payment",
+      "Stop measuring stage-by-stage rates and focus on total impressions"
+    ],
+    answer: 0,
+    explanation: "Doubling impressions also doubles cost. The rate between two stages shows where the biggest leak is; raising the click rate (e.g. from 4% to 6%) adds 50% more customers without extra media spend."
+  },
+  {
+    topic: "Funnel stages",
+    scenario: "Camille, 29, has already decided she wants an e-bike for commuting. She now types into Google: “subscribe or buy an e-bike: which is cheaper?”",
+    question: "Which funnel stage is she in, and which content fits best?",
+    options: [
+      "Consideration (MOFU): a comparison guide with a cost calculator",
+      "Awareness (TOFU): a short inspirational video about commuting",
+      "Loyalty: onboarding emails with route tips",
+      "Advocacy: a refer-a-friend offer with one month free"
+    ],
+    answer: 0,
+    explanation: "“Which option is best for me?” is the consideration question. Comparison pages, reviews and guides answer it, and SEO content is strong at this middle stage."
+  },
+  {
+    topic: "SMART objectives",
+    scenario: "The owner of an independent bookshop in Troyes asks four interns to write a digital objective for the shop's website.",
+    question: "Which objective is SMART?",
+    options: [
+      "Increase organic visits to the website from 1,500 to 4,500 per month by 30 June 2027",
+      "Become the most famous bookshop on the internet",
+      "Get more traffic and more followers as soon as possible",
+      "Publish lots of blog posts this year to improve our SEO"
+    ],
+    answer: 0,
+    explanation: "A SMART objective is Specific (organic visits), Measurable (1,500 → 4,500), Achievable, Relevant and Time-bound (30 June 2027). The others are missing a number, a deadline, or both."
+  },
+  {
+    topic: "KPIs by funnel stage",
+    scenario: "A music-learning app notices that many subscribers cancel after only two months. Management wants to set an objective for the loyalty stage of the funnel.",
+    question: "Which KPI should they track for this objective?",
+    options: [
+      "Churn rate (and customer lifetime value)",
+      "Impressions and reach",
+      "Cost per thousand impressions (CPM)",
+      "Click-through rate on display banners"
+    ],
+    answer: 0,
+    explanation: "Loyalty objectives are about keeping and growing customers. Typical KPIs are repeat purchase rate, customer lifetime value (CLV) and churn rate. Impressions and reach are awareness KPIs."
+  },
+  {
+    topic: "Buyer persona",
+    scenario: "A marketing intern presents the “persona” for a new language-learning app: “Students aged 18–24 living in France.” Her manager says it is not a persona yet.",
+    question: "Why is the manager right?",
+    options: [
+      "It describes a segment (a group); a persona is a semi-fictional individual with goals, pain points and search queries based on research",
+      "It is too narrow; a persona must describe every possible customer of the app, not only students in France",
+      "Personas should contain only demographic data, and this one is missing income and education level",
+      "A persona should be imagined freely by the creative team, so the profile is creative rather than based on customer data"
+    ],
+    answer: 0,
+    explanation: "A segment is a group; a persona is a person (e.g. “Camille, 29, hates crowded Métro mornings”). It is built from real data and tells you topics, keywords, channels and tone."
+  },
+  {
+    topic: "Paid, owned, earned",
+    scenario: "A bakery publishes a photo of its new croissant on its own Instagram profile. The next day it pays Instagram to “boost” that same post to 15,000 local users.",
+    question: "How is the boosted post classified?",
+    options: [
+      "Paid + owned: the brand pays to amplify its own content",
+      "Earned: followers chose to like and share it",
+      "Owned only: it was posted on the brand's own profile",
+      "Paid + earned: Instagram recommends it to new people"
+    ],
+    answer: 0,
+    explanation: "The post itself is owned media; paying to promote it adds paid media. A boosted post sits in the paid + owned overlap."
+  },
+  {
+    topic: "Where SEO sits in the media mix",
+    scenario: "An e-bike brand's comparison guide ranks #1 in Google's organic results for “e-bike subscription vs buying”. It is helped by links from three cycling blogs and by dozens of customer reviews.",
+    question: "How is this visibility best classified?",
+    options: [
+      "An owned page with earned authority: the overlap where SEO grows",
+      "Paid media, because Google sends the traffic to the site",
+      "Pure earned media, because the brand did nothing to obtain it",
+      "Paid + earned, because the reviews were amplified with ads"
+    ],
+    answer: 0,
+    explanation: "SEO starts with owned media (your pages) and needs earned media (links, reviews, mentions) to build authority. The result is organic visibility that is not paid per click."
+  },
+  {
+    topic: "SEO vs SEA",
+    scenario: "Chez Margaux, a new restaurant in Troyes, opens in 10 days. Its website went live yesterday and has no backlinks or reviews yet. The owner wants to appear on Google for “restaurant Troyes centre” from opening night.",
+    question: "What is the best advice?",
+    options: [
+      "Run search ads (SEA) for instant visibility while building SEO for lasting organic rankings",
+      "Rely only on SEO: organic rankings appear within a few days of launch",
+      "Avoid Google entirely: paid search cannot target local searches",
+      "Buy 500 backlinks to reach the top organic position before opening"
+    ],
+    answer: 0,
+    explanation: "SEO takes weeks to months to build; SEA gives visibility from day one but stops when the budget stops. Most brands need both."
+  },
+  {
+    topic: "How search engines work",
+    scenario: "A fashion retailer redesigns its website. Three weeks later, its new “Winter Collection” page still does not appear in Google at all. The developer discovers a “noindex” tag left on the page from the test version.",
+    question: "At which stage of the search process is the page failing?",
+    options: ["Indexing", "Crawling", "Ranking", "Conversion"],
+    answer: 0,
+    explanation: "A noindex tag tells the engine not to store the page in its index. Crawling problems come from robots.txt blocks, server errors or orphan pages; ranking problems come from low relevance, poor UX or weak authority."
+  },
+  {
+    topic: "On-page SEO: the snippet",
+    scenario: "A food blogger's lasagne recipe ranks in position #5 on Google, yet her data shows a much lower click-through rate (CTR) than other pages in similar positions.",
+    question: "What should she work on first?",
+    options: [
+      "Rewrite the title tag and meta description so the result is more enticing to click",
+      "Buy more backlinks to move the page from #5 to #1",
+      "Move the blog to a faster hosting provider",
+      "Repeat the keyword “lasagne” more often in the recipe text"
+    ],
+    answer: 0,
+    explanation: "Position #5 with low CTR is usually a snippet problem, not a ranking problem. The title tag and meta description are what people see in the results, and they drive the click."
+  },
+  {
+    topic: "On-page SEO: title tag",
+    scenario: "An online shop's title tag reads: “Buy the Best Quality Sustainable and Eco-Friendly Denim Jackets Online Today” (78 characters). In Google it appears cut off with “…” and the brand name never shows.",
+    question: "Which rewrite follows the rules seen in class?",
+    options: [
+      "Sustainable Denim Jackets for Men & Women | BlueLoop",
+      "BlueLoop | Home | Shop | Jackets | Denim | Eco | Sale",
+      "Jackets",
+      "Sustainable Denim Jackets, Sustainable Denim, Sustainable Jackets Online"
+    ],
+    answer: 0,
+    explanation: "Aim for 50–60 characters with one primary keyword placed first and the brand name at the end. The other options are vague, start with the brand, or stuff keywords."
+  },
+  {
+    topic: "Off-page SEO: backlinks",
+    scenario: "An agency offers a young start-up “500 backlinks in 7 days from 500 different websites” for €99. The sites are unknown and have nothing to do with the start-up's industry.",
+    question: "What is the most likely outcome?",
+    options: [
+      "It can look like manipulation and trigger a trust penalty instead of a ranking boost",
+      "A guaranteed jump to position #1, since every link is a vote",
+      "No effect at all, because Google ignores every backlink",
+      "Faster crawling and indexing, which automatically improves ranking"
+    ],
+    answer: 0,
+    explanation: "Backlinks are votes of confidence, but quality and relevance beat raw quantity. Hundreds of sudden links from unknown domains signal manipulation."
+  },
+  {
+    topic: "The SEO Tree",
+    scenario: "A cosmetics brand invests heavily in PR to earn press mentions and backlinks. Its rankings don't move: pages take 9 seconds to load on mobile, and parts of the site cannot be crawled.",
+    question: "Using the SEO Tree analogy, what should the brand fix first?",
+    options: [
+      "The roots: technical SEO (speed, crawlability, mobile-friendliness)",
+      "The canopy: even more backlinks and influencer mentions",
+      "The fruit: focus only on conversion rate and revenue",
+      "Nothing: off-page authority will eventually make up for it"
+    ],
+    answer: 0,
+    explanation: "Weak roots (a slow, uncrawlable site) or a thin trunk (poor content) mean the tree can't bear fruit. No amount of off-page effort makes up for a broken technical foundation."
+  },
+  {
+    topic: "Local SEO",
+    scenario: "A hair salon in Troyes wants to appear in the Google Map Pack when people nearby search “hairdresser near me”.",
+    question: "Which action belongs most directly to local SEO?",
+    options: [
+      "Complete its Google Business Profile, keep its name, address and phone (NAP) consistent online, and collect local reviews",
+      "Shorten every URL slug, remove words such as “the” and “and”, and add the keyword “hairdresser” to each page",
+      "Install the Yoast plugin to check readability scores and preview how each page's snippet looks",
+      "Launch a national display banner campaign on news sites to raise awareness of the salon's brand"
+    ],
+    answer: 0,
+    explanation: "Local SEO is about winning “near me” searches: Google Business Profile, NAP consistency and local reviews are its core levers."
+  },
+  {
+    topic: "SEO toolkit",
+    scenario: "A café chain is deciding whether to promote “matcha latte” or “chai latte” on its autumn menu. It wants a free tool to compare how interest in both terms has changed over the last five years, region by region in France.",
+    question: "Which tool fits this need best?",
+    options: [
+      "Google Trends",
+      "Yoast SEO",
+      "SEMrush backlink analysis",
+      "Google Business Profile"
+    ],
+    answer: 0,
+    explanation: "Google Trends is free and compares keyword popularity over time and by region. Yoast checks on-page SEO as you write; SEMrush backlink analysis audits links; a Business Profile is for local visibility."
+  }
+];
+
+/* =========================================================
+   QUIZ ENGINE
+   ========================================================= */
+const TIME_PER_Q = 45; // seconds
+const LETTERS = ["A", "B", "C", "D", "E", "F"];
+const CIRC = 2 * Math.PI * 28;
+
+const $ = (id) => document.getElementById(id);
+const screens = { start: $("startScreen"), quiz: $("quizScreen"), result: $("resultScreen") };
+
+let order = [], current = 0, results = [], shuffledOpts = [], locked = false;
+let timerRAF = null, qStart = 0;
+
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function show(name) {
+  Object.values(screens).forEach(s => s.classList.add("hidden"));
+  screens[name].classList.remove("hidden");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function nameIsValid() {
+  return $("studentName").value.trim().length >= 2;
+}
+
+function startQuiz() {
+  if (!nameIsValid()) {
+    $("nameError").classList.remove("hidden");
+    $("studentName").focus();
+    return;
+  }
+  $("nameError").classList.add("hidden");
+  order = QUESTIONS.map((_, i) => i);            // fixed order; use shuffle(order) to randomise
+  results = [];
+  current = 0;
+  $("qTotal").textContent = order.length;
+  show("quiz");
+  renderQuestion();
+}
+
+function renderQuestion() {
+  locked = false;
+  const q = QUESTIONS[order[current]];
+  $("qNum").textContent = current + 1;
+  $("progressBar").style.width = (current / order.length * 100) + "%";
+  $("qTopic").textContent = q.topic;
+  $("qScenario").textContent = q.scenario;
+  $("qText").textContent = q.question;
+
+  // shuffle options, keep track of original index
+  shuffledOpts = shuffle(q.options.map((text, idx) => ({ text, idx })));
+  const box = $("options");
+  box.innerHTML = "";
+  shuffledOpts.forEach((o, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "opt";
+    b.dataset.pos = i;
+    b.innerHTML = '<span class="key">' + LETTERS[i] + '</span><span></span>';
+    b.lastChild.textContent = o.text;
+    b.addEventListener("click", () => choose(i));
+    box.appendChild(b);
+  });
+
+  $("feedback").className = "feedback";
+  $("nextBtn").classList.add("hidden");
+  $("nextBtn").textContent = current === order.length - 1 ? "See my results →" : "Next question →";
+  startTimer();
+}
+
+function startTimer() {
+  cancelAnimationFrame(timerRAF);
+  const bar = $("timerBar"), num = $("timerNum"), wrap = $("timer");
+  bar.style.strokeDasharray = CIRC;
+  qStart = performance.now();
+  const tick = (now) => {
+    const elapsed = (now - qStart) / 1000;
+    const left = Math.max(0, TIME_PER_Q - elapsed);
+    bar.style.strokeDashoffset = CIRC * (1 - left / TIME_PER_Q);
+    num.textContent = Math.ceil(left);
+    wrap.classList.toggle("low", left <= 15 && left > 7);
+    wrap.classList.toggle("crit", left <= 7);
+    if (left <= 0) { timeUp(); return; }
+    timerRAF = requestAnimationFrame(tick);
+  };
+  timerRAF = requestAnimationFrame(tick);
+}
+
+function stopTimer() {
+  cancelAnimationFrame(timerRAF);
+  return Math.min(TIME_PER_Q, (performance.now() - qStart) / 1000);
+}
+
+function reveal(chosenPos) {
+  const q = QUESTIONS[order[current]];
+  document.querySelectorAll(".opt").forEach((b, i) => {
+    b.disabled = true;
+    const isCorrect = shuffledOpts[i].idx === q.answer;
+    if (isCorrect) b.classList.add("correct");
+    else if (i === chosenPos) b.classList.add("wrong");
+    else b.classList.add("dim");
+  });
+}
+
+function choose(pos) {
+  if (locked) return;
+  locked = true;
+  const t = stopTimer();
+  const q = QUESTIONS[order[current]];
+  const ok = shuffledOpts[pos].idx === q.answer;
+  reveal(pos);
+  results.push({ qi: order[current], chosen: shuffledOpts[pos].idx, status: ok ? "ok" : "bad", time: t });
+  showFeedback(ok ? "ok" : "bad", ok ? "Correct!" : "Not quite.", q.explanation);
+}
+
+function timeUp() {
+  if (locked) return;
+  locked = true;
+  $("timerNum").textContent = "0";
+  const q = QUESTIONS[order[current]];
+  reveal(-1);
+  results.push({ qi: order[current], chosen: null, status: "to", time: TIME_PER_Q });
+  showFeedback("bad", "Time's up!", q.explanation);
+}
+
+function showFeedback(kind, verdict, text) {
+  const fb = $("feedback");
+  fb.className = "feedback show " + kind;
+  $("verdict").textContent = verdict;
+  $("explain").textContent = text;
+  $("nextBtn").classList.remove("hidden");
+  $("nextBtn").focus({ preventScroll: true });
+}
+
+function next() {
+  if (!locked) return;
+  current++;
+  if (current >= order.length) finish();
+  else renderQuestion();
+}
+
+function finish() {
+  $("progressBar").style.width = "100%";
+  const total = order.length;
+  const correct = results.filter(r => r.status === "ok").length;
+  const wrong = results.filter(r => r.status === "bad").length;
+  const to = results.filter(r => r.status === "to").length;
+  const avg = results.reduce((s, r) => s + r.time, 0) / total;
+  const pct = Math.round(correct / total * 100);
+
+  const name = $("studentName").value.trim();
+  $("resName").textContent = name;
+  $("resDate").textContent = new Date().toLocaleString("en-GB", { dateStyle: "full", timeStyle: "short" });
+  $("resScore").innerHTML = correct + "<small>/" + total + "</small>";
+
+  let label, msg;
+  if (pct >= 85)      { label = "Excellent · " + pct + "%"; msg = "You can apply these concepts with confidence."; }
+  else if (pct >= 70) { label = "Very good · " + pct + "%"; msg = "Solid grasp. Review the few questions you missed."; }
+  else if (pct >= 50) { label = "Fair · " + pct + "%";      msg = "The basics are there. Revisit the slides on the topics below."; }
+  else                { label = "Needs review · " + pct + "%"; msg = "Go back over both lectures, then retake the quiz."; }
+  $("resLabel").textContent = label;
+  $("resMsg").textContent = msg;
+
+  $("stCorrect").textContent = correct;
+  $("stWrong").textContent = wrong;
+  $("stTimeout").textContent = to;
+  $("stAvg").textContent = avg.toFixed(1);
+
+  const rv = $("review");
+  rv.innerHTML = "";
+  results.forEach((r, i) => {
+    const q = QUESTIONS[r.qi];
+    const d = document.createElement("div");
+    d.className = "rv";
+    const badge = r.status === "ok" ? ["ok", "Correct"] : r.status === "bad" ? ["bad", "Incorrect"] : ["to", "Timed out"];
+    d.innerHTML =
+      '<div class="rv-top"><span class="badge ' + badge[0] + '">' + badge[1] + '</span>' +
+      '<span class="q"></span></div><div class="a"></div>';
+    d.querySelector(".q").textContent = (i + 1) + ". " + q.question + " (" + q.topic + ")";
+    const a = d.querySelector(".a");
+    if (r.status !== "ok") {
+      const yours = document.createElement("div");
+      yours.innerHTML = "Your answer: <b></b>";
+      yours.querySelector("b").textContent = r.chosen === null ? "no answer" : q.options[r.chosen];
+      a.appendChild(yours);
+    }
+    const right = document.createElement("div");
+    right.innerHTML = "Correct answer: <b></b>";
+    right.querySelector("b").textContent = q.options[q.answer];
+    a.appendChild(right);
+    rv.appendChild(d);
+  });
+
+  show("result");
+}
+
+/* Events */
+$("startBtn").addEventListener("click", startQuiz);
+$("nextBtn").addEventListener("click", next);
+$("retryBtn").addEventListener("click", () => show("start"));
+$("printBtn").addEventListener("click", () => window.print());
+$("studentName").addEventListener("keydown", e => { if (e.key === "Enter") startQuiz(); });
+$("studentName").addEventListener("input", () => {
+  $("startBtn").disabled = !nameIsValid();
+  if (nameIsValid()) $("nameError").classList.add("hidden");
+});
+$("startBtn").disabled = !nameIsValid();
+
+document.addEventListener("keydown", (e) => {
+  if (screens.quiz.classList.contains("hidden")) return;
+  if (e.target.tagName === "INPUT") return;
+  const k = e.key.toUpperCase();
+  const pos = LETTERS.indexOf(k);
+  if (!locked && pos > -1 && pos < shuffledOpts.length) { e.preventDefault(); choose(pos); }
+  else if (locked && e.key === "Enter") { e.preventDefault(); next(); }
+});
+
+/* Theme toggle (remembered per browser when storage is available) */
+(function () {
+  const root = document.documentElement;
+  try { const t = localStorage.getItem("quiz-theme"); if (t) root.dataset.theme = t; } catch (e) {}
+  $("themeBtn").addEventListener("click", () => {
+    const dark = root.dataset.theme
+      ? root.dataset.theme === "dark"
+      : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark";
+    try { localStorage.setItem("quiz-theme", root.dataset.theme); } catch (e) {}
+  });
+})();
+</script>
+</body>
+</html>
